@@ -3,13 +3,34 @@ using System.IO;
 using System.Linq;
 using System.Collections.Generic;
 
+/// <summary>
+/// Manages the loading and display of JPEG images on a quad object in Unity.
+/// </summary>
 public class ImageViewer : MonoBehaviour
 {
-    public GameObject quadObject; // Assign this in the inspector
+    /// <summary>
+    /// The quad GameObject used to display the images. Must be assigned in the inspector.
+    /// </summary>
+    public GameObject quadObject;
+
+    /// <summary>
+    /// List of loaded image textures.
+    /// </summary>
     private List<Texture2D> imageTextures = new List<Texture2D>();
+
+    /// <summary>
+    /// Index of the currently displayed image.
+    /// </summary>
     private int currentImageIndex = -1;
+
+    /// <summary>
+    /// Renderer component of the quad object.
+    /// </summary>
     private Renderer quadRenderer;
 
+    /// <summary>
+    /// Initializes the ImageViewer, checks for required components, and loads images.
+    /// </summary>
     void Start()
     {
         if (quadObject == null)
@@ -28,6 +49,9 @@ public class ImageViewer : MonoBehaviour
         LoadImagesFromPersistentDataPath();
     }
 
+    /// <summary>
+    /// Loads all JPEG images from the application's persistent data path.
+    /// </summary>
     void LoadImagesFromPersistentDataPath()
     {
         string persistentPath = Application.persistentDataPath;
@@ -48,6 +72,10 @@ public class ImageViewer : MonoBehaviour
         ShowNextImage();
     }
 
+    /// <summary>
+    /// Displays the next image in the list on the quad object.
+    /// If the end of the list is reached, it wraps around to the beginning.
+    /// </summary>
     public void ShowNextImage()
     {
         if (imageTextures.Count == 0)

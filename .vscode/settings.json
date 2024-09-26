@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "apoQlar-assignment.sln"
+    "dotnet.defaultSolution": "Frame-Assignment.sln"
 }

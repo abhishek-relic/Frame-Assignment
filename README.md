@@ -33,7 +33,7 @@ This VR application allows users to interact with a virtual photo frame in a VR 
 
 1. Clone this repository:
    ```
-   git clone https://github.com/yourusername/vr-photo-frame.git
+   git clone https://github.com/abhishek-relic/Frame-Assignment.git
    ```
 
 2. Open the project in Unity (version 2022.3.17f1).

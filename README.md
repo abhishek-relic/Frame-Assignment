@@ -58,7 +58,9 @@ This VR application allows users to interact with a virtual photo frame in a VR 
 1. Build and run the application on your Meta Quest device.
 2. Use your VR controllers or hands to interact with the photo frame:
    - Grab the frame to move it
-   - Use both controllers to scale and rotate the frame
+   - Use both controllers to scale
+   - Grab UI indicators on the edges of the frame to rotate the frame
+   - Grab UI indicators on the corners of the frame to rotate the frame
 3. Press the "Activate Float" button to toggle the frame's floating behavior
 4. Press the "Next photo" button to cycle through available photos
 
@@ -87,7 +89,6 @@ Key components:
 
 - Images are loaded at startup to minimize runtime performance impact
 - Smooth transitions use coroutines to distribute processing over multiple frames
-- Texture compression settings should be optimized for mobile VR
 
 ## Known Issues and Limitations
 
